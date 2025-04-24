@@ -24,10 +24,8 @@ def get_menu_data():
 
 def get_todays_menu():
     menu_data = get_menu_data()
-    current_day = datetime.now().weekday()  # Monday is 0, Sunday is 6
-    
-    # Adjust for the PDF's day mapping
-    day = current_day + 1  # Add 1 to match the PDF's day mapping
+    current_day = datetime.now().weekday()
+    day = current_day + 1
     
     day_menu = []
     for i in range(1, len(menu_data)):
