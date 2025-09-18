@@ -1,81 +1,329 @@
-* {
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+html, body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: block;
+    font-family: 'Trebuchet MS', sans-serif;
+
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+body{
+    --white: white;
+    --brown: #623B2A;
+    --blue: #548EB5;
+    margin: 0;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 2rem;
+.main{
+    height: 100%;
 }
+.header{
+    height: 60px;
+    background-color: var(--blue);
+    vertical-align: middle;
+    position: relative;
 
-h1 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
 }
-
-.date {
-    color: #7f8c8d;
-    font-size: 1.1rem;
-}
-
-.menu-container {
-    background-color: white;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.menu-list {
-    list-style-type: none;
-}
-
-.menu-list li {
-    padding: 0.8rem;
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.3s ease;
-}
-
-.menu-list li:last-child {
-    border-bottom: none;
-}
-
-.menu-list li:hover {
-    background-color: #f8f9fa;
-}
-
-footer {
-    text-align: center;
-    margin-top: 2rem;
-    color: #7f8c8d;
-    font-size: 0.9rem;
-}
-
-@media (max-width: 600px) {
-    .container {
-        padding: 1rem;
-    }
+.header-container{
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     
-    .menu-container {
-        padding: 1rem;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: stretch;
+    
+}
+
+.highlight{
+    background-color: var(--brown);
+    padding-left: 4px;
+    border-radius: 3px;
+
+}
+
+.fit{
+    width: 100%;
+    height: 100%;
+}
+
+.arrowbutton{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 40px;
+    position: relative;
+}
+
+.logocontainer{
+    top: 7.5px;
+    height: 45px;
+    width: auto;
+    right: calc(50% - 22.5px);
+    position: absolute;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 40px;
+}
+
+.wticon{
+    width: auto;
+
+}
+
+.refresh{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 40px;
+    position: relative;
+}
+
+.center-container{
+    flex: 1;
+    text-align: right;
+    justify-content: flex-end;
+    padding-right: 6px;
+    display: flex;
+    position: relative;
+    
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    border: none;
+    position: relative;
+    background-color: var(--white);
+    padding: 0;
+    margin-right: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.21);
+    transition: all 0.2s ease-in-out;
+
+}
+
+.button:hover{
+    background-color: var(--brown);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+    .icon {
+        fill: rgb(255, 255, 255);
     }
-} 
+}
+
+
+.headtext-container{
+    text-align: right;
+    margin-right: 0;
+}
+
+.headtext{
+    height: 50px;
+    text-align: center;
+    color: var(--white);
+    margin: 0;
+    font-weight: bolder;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.datespan{
+    letter-spacing: -1px;
+    padding-left: 5px;
+}
+
+.justleft{
+    float: right;
+}
+
+.justright{
+    float: right;
+    padding-right: 5px;
+}
+
+.icon{
+    margin: auto;
+    fill: var(--blue);
+    height: 30px;
+    width: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+
+
+.menusection{
+    width: clamp(80%, 90%, 95%);
+    margin: auto;
+    margin-top: 20px;
+    color: var(--brown);
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.title{
+    font-size: 24.5px;
+    background-color: var(--brown);
+    color: white;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    padding-top: 2px;
+    padding-right: 10px;
+    border-radius: 5px;
+    width: auto;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.45);
+    margin-bottom: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.title:hover{
+    box-shadow: 2px 3px 13px 0px rgba(0, 0, 0, 0.5);
+}
+
+.menudiv{
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+
+.menuitem{
+    font-weight: bolder;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 5px;
+    width: fit-content;
+    color: white;
+    background-color: var(--blue);
+    transition: all .3s ease-in-out;
+}
+
+.menuitem:hover{
+    background-color: var(--blue);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.384);
+}
+
+.dricon{
+    height: 20px;
+    width: 20px;
+}
+
+.gf{
+    border-radius: 100%;
+}
+
+.hasdr{
+    padding-bottom: 25px;
+}
+
+.tag {
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(5px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.material-symbols-rounded {
+  font-size: 70px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 24
+}
+
+
+
+
+@media only screen and (max-width: 850px) {
+    * {
+        transition: all .2s ease-in-out;
+    }
+    .restofday{
+        display: none;
+    }
+    .highlight{
+        padding-right: 4px;
+    }
+    .menusection{
+        max-width: 500px;
+        display: block;
+    }
+
+    .menudiv{
+        margin-bottom: 25px;
+    }
+
+    .title{
+        font-size: 24px;
+        width: fit-content;
+    }
+
+    .headtext{
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+    .header{
+        height: 53px;
+        background-color: var(--blue);
+        vertical-align: middle;
+        position: relative;
+    
+    }
+    .header-container{
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 53px;
+    }
+    .logocontainer{
+        top: 6.5px;
+        height: 40px;
+        right: calc(50% - 40);
+    }
+
+    .icon{
+        height: 27px;
+    }
+
+    .button{
+        height: 35px;
+        width: 35px;
+        padding-right: 0px;
+    }
+    .justright{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .refresh{
+        padding-right: 6px;
+    }
+}
