@@ -5,6 +5,7 @@ from io import BytesIO
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
+app.secret_key = "secretkeyhahahaha"
 
 PDF_URL = "https://westtown.myschoolapp.com/ftpimages/1579/download/download_3631449.pdf?_=1758060252872"
 
@@ -182,3 +183,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
